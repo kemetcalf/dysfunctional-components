@@ -1,12 +1,15 @@
-import Button from "react-bootstrap/Button";
 import "./App.css";
-import BasicButton from "./Components.js/no1Button.js";
+import ModalButton from "./Components.js/no1Button.js";
+import { Container, Row } from "react-bootstrap";
 
 function App() {
 	return (
-		<div className="App">
-			<BasicButton />
-		</div>
+		<Container className="d-flex h-100">
+			<Row className="align-self-center">
+				<ModalButton />
+				{/* TODO: CENTER BUTTON */}
+			</Row>
+		</Container>
 	);
 }
 

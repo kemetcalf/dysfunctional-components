@@ -1,15 +1,26 @@
 import Button from "react-bootstrap/esm/Button";
+import AboutModal from "./no2Modal";
+import { useState } from "react";
 
-function BasicButton() {
+function ModalButton() {
+	const [modalShow, setModalShow] = useState(false);
+
 	return (
-		<div className="BasicButton">
-			<div className="mb-2">
-				<Button variant="primary" size="lg">
+		<div className="ModalButton">
+			<div className="my-2">
+				<Button
+					active
+					variant="primary"
+					size="lg"
+					onClick={() => setModalShow(true)}
+				>
 					Big Button
 				</Button>
+
+				<AboutModal show={modalShow} onHide={() => setModalShow(false)} />
 			</div>
 		</div>
 	);
 }
 
-export default BasicButton;
+export default ModalButton;
